@@ -10,7 +10,7 @@ function openServices() {
         //navigator geolocation getcurrentposition takes a callback function as an argument (provides coords when they are available )
         navigator.geolocation.getCurrentPosition(function(e) {
             console.log("location:", e.coords.latitude, e.coords.longitude);
-            if (Math.abs(e.coords.latitude - eltonsLat) < 0.0001 && Math.abs(e.coords.longitude - eltonsLong) < 0.0001) {
+            if (Math.abs(e.coords.latitude - eltonsLat) < 0.0008 && Math.abs(e.coords.longitude - eltonsLong) < 0.0008) {
                 myLocation.innerHTML = "you're steaming hot"
                 
             }
