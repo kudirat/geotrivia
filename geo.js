@@ -9,15 +9,16 @@ function openServices() {
         //console.log(navigator.geolocation.getCurrentPosition);
         //navigator geolocation getcurrentposition takes a callback function as an argument (provides coords when they are available )
         navigator.geolocation.getCurrentPosition(function(e) {
+            myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
             console.log("location:", e.coords.latitude, e.coords.longitude);
-            if (Math.abs(e.coords.latitude - eltonsLat) < 0.1008 && Math.abs(e.coords.longitude - eltonsLong) < 0.1008) {
-                myLocation.innerHTML = "you're steaming hot"
+            // if (Math.abs(e.coords.latitude - eltonsLat) < 0.0001 && Math.abs(e.coords.longitude - eltonsLong) < 0.0001) {
+            //     myLocation.innerHTML = "you're steaming hot"
                 
-            }
-            else {
-                myLocation.innerHTML = "you're cold"
-                myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - eltonsLat) + Math.abs(e.coords.longitude - eltonsLong) * 364000)
-            }
+            // }
+            // else {
+            //     myLocation.innerHTML = "you're cold"
+            //     myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - eltonsLat) + Math.abs(e.coords.longitude - eltonsLong) * 364000)
+            // }
         }); 
         
         
