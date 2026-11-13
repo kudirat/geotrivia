@@ -1,6 +1,12 @@
-//eltons
-let eltonsLat = 40.69272122881661;
-let eltonsLong = -73.98702333530535;
+
+//teaching podium
+
+let teachingLat = 40.69335958934216;
+let teachingLong = -73.98806824916387;
+
+//1 unit is 365,221 ft
+
+//.0001 is approx 36.5 ft
 
 function openServices() {
     if ( 'geolocation' in navigator) {
@@ -11,14 +17,14 @@ function openServices() {
         navigator.geolocation.getCurrentPosition(function(e) {
             myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
             console.log("location:", e.coords.latitude, e.coords.longitude);
-            // if (Math.abs(e.coords.latitude - eltonsLat) < 0.0001 && Math.abs(e.coords.longitude - eltonsLong) < 0.0001) {
-            //     myLocation.innerHTML = "you're steaming hot"
+            if (Math.abs(e.coords.latitude - teachingLat) < 0.0001 && Math.abs(e.coords.longitude - teachingLong) < 0.0001) {
+                myLocation.innerHTML = "you're steaming hot"
                 
-            // }
-            // else {
-            //     myLocation.innerHTML = "you're cold"
-            //     myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - eltonsLat) + Math.abs(e.coords.longitude - eltonsLong) * 364000)
-            // }
+            }
+            else {
+                myLocation.innerHTML = "you're cold"
+                myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - teachingLat) + Math.abs(e.coords.longitude - teachingLong) * 364000)
+            }
         }); 
         
         
