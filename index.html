@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GEOTrivia!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="site-title">⚝GeoTrivia!⚝</h1>
+        <p id="site-description">The answers are hidden until you're at the sweet spot!ᕙ(⇀‸↼‶)ᕗ</p>
+        <p id="privacy-disc">Your location is read only on this device. It is never stored or sent anywhere.</p>
 
-    </head>
-    <body>
+        <section id="landing" class="card" aria-labelledby="landing-title">
+            <h2 id="landing-title">Ready to play?</h2>
+            <p>Try to Answer all Five Questions!</p>
+            <button id="start-button" type="button">START</button>
+        </section>
 
-        <p id="myLocation">press button to enable location services</p>
-        <button id="enableServices" onclick="openServices()">start cache-ing! 🌎</button>
-    </body>
+        <section id="quiz" class="card" hidden>
+            <p id="question-count"></p>
+            <h2 id="question-text"></h2>
+            <p id="question-category" class="muted"></p>
+            <form id="answer-form">
+                <fieldset>
+                    <legend>Choose your answer</legend>
+                    <div id="options"></div>
+                </fieldset>
+                <button id="answer-button" type="submit" disabled>Lock in answer</button>
+            </form>
+        </section>
+
+        <section id="locked" class="card" hidden>
+            <h2 id="locked-title">Your answers are locked</h2>
+            <p>Head to 370 Jay Street, Brooklyn. The correct answers stay hidden until your device is ~ 100 meters of the building.</p>
+            <p id="location-status" class="status" role="status">Your guesses are saved for this round. Check your location when you're ready.</p>
+            <p id="accuracy" class="muted"></p>
+            <button id="check-button" type="button">Location Check!</button>
+        </section>
+
+        <section id="reveal" class="card" hidden>
+            <h2 id="reveal-title">All answers revealed</h2>
+            <div id="results"></div>
+            <p id="score"></p>
+            <button id="again-button" type="button">Replay!</button>
+        </section>
+    </div>
+    <script src="questionPool.js"></script>
     <script src="geo.js"></script>
+</body>
 </html>

@@ -1,0 +1,95 @@
+html {
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #052542;
+    background: #e0ecf2;
+    text-align: center;
+}
+
+body {
+    box-sizing: border-box;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+#site-title {
+    margin-top: 10px;
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#site-description {
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, p {
+     line-height: 1.45;
+    }
+
+h1 {
+     font-size: clamp(2rem, 8vw, 3.25rem); 
+     margin-bottom: .4rem;
+ }
+
+.card {
+    background: #fff;
+    border: 1px solid #d6ddd6;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    padding: clamp(1.25rem, 5vw, 2rem);
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    border: 4px double #3e6589
+}
+#privacy-disc, .muted {
+     color: #a5c0df;
+     }
+#privacy-disc {
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+ }
+
+button {
+    background: #052542;
+    border-radius: 8px;
+    color: #e0ecf2;
+    cursor: pointer;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: .7rem 1.1rem;
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: bold;
+    border: 2px solid #3e6589;
+}
+button:focus-visible, a:focus-visible, .option:focus-within {
+    outline: 3px solid #d28a16;
+    outline-offset: 3px;
+}
+button:disabled { cursor: not-allowed; opacity: .6; }
+fieldset { border: 0; margin: 1.5rem 0 0; padding: 0; }
+legend { font-weight: 700; margin-bottom: .65rem; }
+.option {
+    align-items: center;
+    border: 1px solid #cbd4ce;
+    border-radius: .6rem;
+    display: flex;
+    gap: .75rem;
+    margin: .55rem 0;
+    padding: .8rem;
+}
+.option:has(input:checked) { background: #edf5ef; border-color: #174f3e; }
+.option input { accent-color: #174f3e; }
+.status { min-height: 1.5em; }
+.result { border-top: 1px solid #d6ddd6; margin-top: 1.25rem; padding-top: 1rem; }
+.result:first-of-type { border-top: 0; }
+.badge { color: #174f3e; font-weight: 700; }
+a { color: #174f3e; }
+[hidden] { display: none !important; }
