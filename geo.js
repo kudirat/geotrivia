@@ -69,7 +69,7 @@ function renderQuestion() {
     answerButton.disabled = true;
     answerButton.textContent = currentQuestion === roundQuestions.length - 1
         ? "Lock in answer"
-        : "Submit and continue";
+        : "Continue";
     optionsContainer.replaceChildren();
 
     item.options.forEach((option, index) => {
